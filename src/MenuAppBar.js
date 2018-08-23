@@ -50,20 +50,20 @@ class MenuAppBar extends React.Component {
 
   handleMenuClose = () => {
     this.setState({ menuEl: null });
-  }
+  };
 
-  handleMenuClick = (e) => {
+  handleMenuClick = e => {
     e.preventDefault();
     const id = e.target.id;
 
     this.handleMenuClose();
     const links = {
-      'homeLink': '/',
-      'aboutLink': '/about',
-      'topicsLink': '/topics'
-    }
+      homeLink: '/',
+      aboutLink: '/about',
+      topicsLink: '/topics',
+    };
     history.push(links[id]);
-  }
+  };
 
   render() {
     const { classes } = this.props;
@@ -98,11 +98,21 @@ class MenuAppBar extends React.Component {
               open={menuOpen}
               onClose={this.handleMenuClose}
             >
-              <MenuItem id="homeLink" onClick={this.handleMenuClick}>Home</MenuItem>
-              <MenuItem id="aboutLink" onClick={this.handleMenuClick}>About</MenuItem>
-              <MenuItem id="topicsLink" onClick={this.handleMenuClick}>Topics</MenuItem>
+              <MenuItem id="homeLink" onClick={this.handleMenuClick}>
+                Home
+              </MenuItem>
+              <MenuItem id="aboutLink" onClick={this.handleMenuClick}>
+                About
+              </MenuItem>
+              <MenuItem id="topicsLink" onClick={this.handleMenuClick}>
+                Topics
+              </MenuItem>
             </Menu>
-            <Typography variant="title" color="inherit" className={classes.flex}>
+            <Typography
+              variant="title"
+              color="inherit"
+              className={classes.flex}
+            >
               Swapminder
             </Typography>
             {auth && (

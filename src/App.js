@@ -1,5 +1,5 @@
-import React from "react";
-import { Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import { Router, Route, Link } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import history from './history';
