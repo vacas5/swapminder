@@ -4,6 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import history from './history';
 import MenuAppBar from './MenuAppBar';
+import Dashboard from './Dashboard';
 
 const BasicExample = () => (
   <Router history={history}>
@@ -11,19 +12,11 @@ const BasicExample = () => (
       <CssBaseline />
       <MenuAppBar classes={{}} />
 
-      <hr />
-
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Dashboard} />
       <Route path="/about" component={About} />
       <Route path="/topics" component={Topics} />
     </div>
   </Router>
-);
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
 );
 
 const About = () => (
